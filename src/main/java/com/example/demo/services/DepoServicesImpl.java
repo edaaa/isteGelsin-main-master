@@ -40,7 +40,6 @@ public class DepoServicesImpl implements DepoServices {
         depoRepository.save(depoEntity);
         return new DepoResponse(messageSource.getMessage("depo.create.success", null, Locale.ENGLISH));
     }
-
     @Override
     public DepoResponse closeDepo(DepoCloseDto depoCloseDto) {
         Optional<DepoEntity> depoEntity = depoRepository.findById(depoCloseDto.getDepoId());
