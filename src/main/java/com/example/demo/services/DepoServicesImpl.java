@@ -46,7 +46,6 @@ public class DepoServicesImpl implements DepoServices {
         if (depoEntity.isEmpty() || depoMain.isEmpty()) {
             return new DepoResponse(messageSource.getMessage("depo.close.not.found.depo", null, Locale.ENGLISH));
         }
-
        List<StockEntity> stocks = depoEntity.get().getStocks();
         for (StockEntity stock : stocks) {
             stocksServices.transfer(stock,depoMain.get(),stock.getCount());
