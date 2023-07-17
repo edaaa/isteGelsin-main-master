@@ -21,9 +21,8 @@ import java.util.Optional;
 @Service
 @AllArgsConstructor
 public class DepoServicesImpl implements DepoServices {
-
     private final DepoRepository depoRepository;
-    private final StockRepository stockRepository;
+
     private final MessageSource messageSource;
     private final StocksServices stocksServices;
 
